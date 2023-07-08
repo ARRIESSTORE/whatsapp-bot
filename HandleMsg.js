@@ -1286,7 +1286,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                     break
 
                 case 'delstiker':
-                    if (isOwnerBot) return piyo.reply(from, `Hanya untuk owner bot!`, id)
+                    if (isOwnerBot) return piyo.reply(from, `Hanya untuk owner satya-bot!`, id)
                     try {
                         await fs.unlinkSync('./media/sticker/' + q + '.jpg').then(() => {
                             piyo.reply(from, `Menghapus Stiker ${q}`, id)
@@ -1353,7 +1353,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                             await piyo.reply(from, 'Format pesan salah...', id)
                         }
                     } else if (args.length === 1) {
-                        if (!isUrl(url)) { await piyo.reply(from, 'Maaf, link yang kamu kirim tidak valid.', id) }
+                        if (!isUrl(url)) { await piyo.reply(from, 'Maaf, link yang ayank kirim tidak valid.', id) }
                         piyo.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
                             ? piyo.sendText(from, 'Maaf, link yang kamu kirim tidak memuat gambar.')
                             : piyo.reply(from, 'Here\'s your sticker')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
@@ -1469,7 +1469,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                         }
                     } catch (err) {
                         console.error(err)
-                        await piyo.reply(from, `Ada yang Error!\nmungkin kata kunci yang anda cari tidak ada`, id)
+                        await piyo.reply(from, `Ada yang Error!\nmungkin kata kunci yang ayank cari tidak ada`, id)
                     }
                     break
                 case 'linesticker':
@@ -1642,7 +1642,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                     await piyo.sendFileFromUrl(from, `https://api.zeks.xyz/api/logobp?text=${blpk}&apikey=${apizeks}`, 'blackpink.jpg', '', id)
                     break
                 case 'pornhub':
-                    if (args.length == 2) return piyo.reply(from, `Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Alvio|Piyobot*`, id)
+                    if (args.length == 2) return piyo.reply(from, `Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Satya|Piyobot*`, id)
                     argz = body.trim().split('|')
                     if (argz.length >= 2) {
                         piyo.reply(from, ind.wait(), id)
@@ -1652,7 +1652,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                         if (lpornhub2.length > 10) return piyo.reply(from, '*Teks2 Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
                         piyo.sendFileFromUrl(from, `https://api.zeks.xyz/api/phlogo?text1=${lpornhub}&text2=${lpornhub2}&apikey=${apizeks}`)
                     } else {
-                        await piyo.reply(from, `Wrong Format!\n[❗] Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Piyo|Alvio*`, id)
+                        await piyo.reply(from, `Wrong Format!\n[❗] Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Piyo|Satya*`, id)
                     }
                     break
                 case 'mlmaker':
@@ -1773,7 +1773,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                     piyo.sendFileFromUrl(from, `https://piyoz.my.id/api/textpro/captamerica?text=${q}`)
                     break
                 case 'pornhub':
-                    if (args.length == 2) return piyo.reply(from, `Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Alvio|Piyobot*`, id)
+                    if (args.length == 2) return piyo.reply(from, `Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Satya|Piyobot*`, id)
                     argz = body.trim().split('|')
                     if (argz.length >= 2) {
                         piyo.reply(from, ind.wait(), id)
@@ -1783,7 +1783,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                         if (lpornhub2.length > 10) return piyo.reply(from, '*Teks2 Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
                         piyo.sendFileFromUrl(from, `https://api.vhtear.com/pornlogo?text1=${lpornhub}&text2=${lpornhub2}&apikey=${vhtearkey}`)
                     } else {
-                        await piyo.reply(from, `Wrong Format!\n[❗] Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Piyo|Alvio*`, id)
+                        await piyo.reply(from, `Wrong Format!\n[❗] Kirim perintah */pornhub [ |Teks1|Teks2 ]*, contoh */pornhub |Piyo|Satya*`, id)
                     }
                     break
 
@@ -1943,7 +1943,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'antisticker':
                     if (!isGroupMsg) return piyo.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
                     if (!isGroupAdmins) return piyo.reply(from, `Perintah ini hanya bisa di gunakan oleh Admin group!`, id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, `Perintah ini hanya bisa di gunakan jika Bot menjadi Admin!`, id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, `Perintah ini hanya bisa di gunakan jika Satya menjadi Admin!`, id)
                     if (ar[0] === 'enable') {
                         var cek = antisticker.includes(chatId);
                         if (cek) {
@@ -1969,7 +1969,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'antiporn': //ini antipornnya beli dulu apikenya, cuma support gambar / kalo mau support sticker dan video bisa ke saya , wa.me/6281414046576
                     if (!isGroupMsg) return piyo.reply(from, `Fitur ini hanya bisa diaktifkan didalam grup!`, id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Perintah ini hanya bisa digunakan oleh Admin Grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Jadikan bot sebagai Admin terlebih dahulu!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Jadikan satya sebagai Admin terlebih dahulu!', id)
                     if (ar[0] == 'on') {
                         if (isAntiPorn) return piyo.reply(from, 'Anti-porn sudah pernah diaktifkan di grup ini sebelumnya!', id)
                         isPorn.push(chatId)
@@ -2197,8 +2197,8 @@ module.exports = HandleMsg = async (piyo, message) => {
 
                 case 'sider':
                     if (!isGroupMsg) return piyo.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
-                    if (!quotedMsg) return piyo.reply(from, `Tolong Reply Pesan Bot`, id)
-                    if (!quotedMsgObj.fromMe) return piyo.reply(from, `Tolong Reply Pesan Bot`, id)
+                    if (!quotedMsg) return piyo.reply(from, `Tolong Reply Pesan Satya`, id)
+                    if (!quotedMsgObj.fromMe) return piyo.reply(from, `Tolong Reply Pesan Satya`, id)
                     try {
                         const reader = await piyo.getMessageReaders(quotedMsgObj.id)
                         let list = ''
@@ -2208,7 +2208,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                         await piyo.sendTextWithMentions(from, `Ngeread doangg.. Nimbrung kagaa\n${list}`)
                     } catch (err) {
                         console.log(err)
-                        piyo.reply(from, `Maaf, Belum Ada Yang Membaca Pesan Bot atau Mereka Menonaktifkan Read Receipts`, id)
+                        piyo.reply(from, `Maaf, Belum Ada Yang Membaca Pesan Satya atau Mereka Menonaktifkan Read Receipts`, id)
                     }
                     break
 
@@ -2264,7 +2264,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'edotensei':
                     if (!isGroupMsg) return piyo.reply(from, 'Fitur ini hanya bisa di gunakan dalam group', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Wahai admin, jadikan saya sebagai admin grup dahulu :)', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Wahai admin, jadikan satya sebagai admin grup dahulu :)', id)
                     if (mentionedJidList.length === 0) return piyo.reply(from, 'Fitur untuk menghapus member lalu menambahkan member kembali,kirim perintah ${prefix}edotensei @tagmember', id)
                     for (let i = 0; i < mentionedJidList.length; i++) {
                         if (groupAdmins.includes(mentionedJidList[i])) return piyo.reply(from, ind.error, id)
@@ -2323,7 +2323,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'kick':
                     if (!isGroupMsg) return piyo.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan satya-bot sebagai admin grup!', id)
                     if (mentionedJidList.length === 0) return piyo.reply(from, 'Maaf, format pesan salah.\nSilahkan tag satu atau lebih orang yang akan dikeluarkan', id)
                     if (mentionedJidList[0] === botNumber) return await piyo.reply(from, 'Maaf, format pesan salah.\nTidak dapat mengeluarkan akun bot sendiri', id)
                     await piyo.sendTextWithMentions(from, `Request diterima, mengeluarkan:\n${mentionedJidList.map(x => `@${x.replace('@c.us', '')}`).join('\n')}`)
@@ -2335,7 +2335,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'promote':
                     if (!isGroupMsg) return piyo.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan satya-bot sebagai admin grup!', id)
                     if (mentionedJidList.length !== 1) return piyo.reply(from, 'Maaf, hanya bisa mempromote 1 user', id)
                     if (groupAdmins.includes(mentionedJidList[0])) return await piyo.reply(from, 'Maaf, user tersebut sudah menjadi admin.', id)
                     if (mentionedJidList[0] === botNumber) return await piyo.reply(from, 'Maaf, format pesan salah.\nTidak dapat mempromote akun bot sendiri', id)
@@ -2345,7 +2345,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'demote':
                     if (!isGroupMsg) return piyo.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan satya-bot sebagai admin grup!', id)
                     if (mentionedJidList.length !== 1) return piyo.reply(from, 'Maaf, hanya bisa mendemote 1 user', id)
                     if (!groupAdmins.includes(mentionedJidList[0])) return await piyo.reply(from, 'Maaf, user tersebut belum menjadi admin.', id)
                     if (mentionedJidList[0] === botNumber) return await piyo.reply(from, 'Maaf, format pesan salah.\nTidak dapat mendemote akun bot sendiri', id)
@@ -2359,7 +2359,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                     break
                 case 'del':
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!quotedMsg) return piyo.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
+                    if (!quotedMsg) return piyo.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan satya-bot dengan caption ${prefix}del`, id)
                     if (!quotedMsgObj.fromMe) return piyo.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
                     piyo.deleteMessage(quotedMsgObj.chatId, quotedMsgObj.id, false)
                     break
@@ -2379,7 +2379,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'mutegrup':
                     if (!isGroupMsg) return piyo.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan satya-bot sebagai admin grup!', id)
                     if (args.length !== 1) return piyo.reply(from, `Untuk mengubah settingan group chat agar hanya admin saja yang bisa chat\n\nPenggunaan:\n${prefix}mutegrup on --aktifkan\n${prefix}mutegrup off --nonaktifkan`, id)
                     if (args[0] == 'on') {
                         piyo.setGroupToAdminsOnly(groupId, true).then(() => piyo.sendText(from, 'Berhasil mengubah agar hanya admin yang dapat chat!'))
@@ -2392,7 +2392,7 @@ module.exports = HandleMsg = async (piyo, message) => {
                 case 'setprofile':
                     if (!isGroupMsg) return piyo.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (!isGroupAdmins) return piyo.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
+                    if (!isBotGroupAdmins) return piyo.reply(from, 'Gagal, silahkan tambahkan satya-bot sebagai admin grup!', id)
                     if (isMedia && type == 'image' || isQuotedImage) {
                         const dataMedia = isQuotedImage ? quotedMsg : message
                         const _mimetype = dataMedia.mimetype
