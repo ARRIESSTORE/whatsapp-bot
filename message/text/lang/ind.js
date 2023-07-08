@@ -2,7 +2,7 @@ const fs = require('fs-extra')
 
 
 exports.wait = () => {
-    return `Mohon tunggu sebentar~`
+    return `tunggu bentar ya.. oom~`
 }
 
 exports.gsm = (result) => {
@@ -86,7 +86,7 @@ exports.cmdNotFound = () => {
 }
 
 exports.blocked = () => {
-    return `Bot tidak menerima panggilan. Karena kamu telah melanggar rules, maka kamu telah diblok!\n\nHarap hubungi owner: wa.me/6281294958473`
+    return `Bot tidak menerima panggilan. Karena kamu telah melanggar rules, maka kamu telah diblok!\n\nHarap hubungi owner: wa.me/6288220574267`
 }
 
 exports.ownerOnly = () => {
@@ -148,7 +148,7 @@ exports.botNotPremium = () => {
 }
 
 exports.botNotAdmin = () => {
-    return `Jadikan bot sebagai admin terlebih dahulu!`
+    return `Jadikan satya sebagai admin terlebih dahulu!`
 }
 
 exports.ytLimit = () => {
@@ -176,7 +176,7 @@ exports.registered = () => {
 }
 
 exports.follow = () => {
-    return `Makasih ya sudah follow instagram owner , semoga tuhan memberkatimu ~ , kirim ulang apa yang mau dikerjakan oleh bot , terimakasih`
+    return `Makasih ya sudah follow instagram owner , semoga allah menyayangimu ~ , kirim ulang apa yang mau dikerjakan oleh styBotz , terimakasih`
 }
 
 exports.followsudah = () => {
@@ -184,7 +184,7 @@ exports.followsudah = () => {
 }
 
 exports.belomfollow = () => {
-    return `anda belum menfollow ig owner , silahkan follow terlebih dahulu\n*dan silahkan cek bio owner di instagram*\nhttps://www.instagram.com/alvio151/\n\n*INGAT CEK BIO IG OWNER*`
+    return `anda belum menfollow ig owner , silahkan follow terlebih dahulu\n*dan silahkan cek bio owner di instagram*\nhttps://www.instagram.com/satyadamar/\n\n*INGAT CEK BIO IG OWNER*`
 }
 exports.registeredAlready = () => {
     return `Kamu sudah mendaftar sebelumnya.`
