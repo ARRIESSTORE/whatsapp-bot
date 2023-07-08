@@ -1,7 +1,7 @@
 {
-   "name": "whatsapp-bot",
+   "name": "satya-bot",
    "version": "3.0.0",
-   "description": "Whatsapp Bot - Node Js",
+   "description": "satyaa Bot - Node Js",
    "main": "index.js",
    "scripts": {
       "start": "node index.js"
